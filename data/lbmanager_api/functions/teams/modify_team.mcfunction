@@ -1,1 +1,2 @@
-$data modify storage lbmanager:main teams.$(id) set value {name:$(name),maxcount:$(maxcount)}
+$execute unless data storage lbmanager:main teams.$(id) run function lnmanager:commands/create_team {id:$(id)}
+$data modify storage lbmanager:main teams.$(id) set value {name:$(name),maxcount:$(maxcount),mc_team:$(mc_team)}
