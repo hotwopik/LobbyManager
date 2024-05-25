@@ -5,3 +5,5 @@ scoreboard objectives add lbmanager.player.leave custom:leave_game
 #Teams
 scoreboard objectives add lbmanager.teams.player_count dummy
 scoreboard objectives add lbmanager.teams.max_count dummy
+
+function #lbmanager:after_init
