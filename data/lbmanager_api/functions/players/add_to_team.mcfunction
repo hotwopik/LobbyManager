@@ -1,8 +1,8 @@
 scoreboard players set success lbmanager.main 1
 
-execute unless entity @s[type=player] run function lbmanager:commands/is_not_player
-$execute unless data storage lbmanager:main teams.$(team) run function lbmanager:commands/team_notexist
-execute if entity @s[type=player,tag=lbmanager.in_team] run function lbmanager:commands/allready_inteam
+execute unless entity @s[type=player] run function lbmanager:commands/exceptions/is_not_player
+$execute unless data storage lbmanager:main teams.$(team) run function lbmanager:commands/exceptions/team_notexist
+execute if entity @s[type=player,tag=lbmanager.in_team] run function lbmanager:commands/exceptions/allready_inteam
 
 execute if score success lbmanager.main matches 0 run return 0
 
