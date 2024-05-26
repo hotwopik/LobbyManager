@@ -9,7 +9,7 @@ data remove storage lbmanager:temp players_to_remove
 
 $data remove storage lbmanager:main teams."$(team)"
 $data remove storage lbmanager:main team_ids[{id:"$(team)"}]
-$scoreboard players reset $(id) lbmanager.teams.player_count
-$scoreboard players reset $(id) lbmanager.teams.max_count
+$scoreboard players reset $(team) lbmanager.teams.player_count
+$scoreboard players reset $(team) lbmanager.teams.max_count
 
 $function #lbmanager:team/removed {team:$(team)}

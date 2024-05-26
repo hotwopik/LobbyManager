@@ -1,1 +1,1 @@
-$data modify storage lbmanager:temp data.team set from storage lbmanager:main players."$(UUID)".team
+$data modify storage lbmanager:temp data.team set from storage lbmanager:main players."$(UUID)"
