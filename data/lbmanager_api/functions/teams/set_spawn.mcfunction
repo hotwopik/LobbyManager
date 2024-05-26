@@ -1,6 +1,6 @@
 scoreboard players set success lbmanager.main 1
 
-$execute unless data storage lbmanager:main teams."$(team)" run function lbmanager:teams/exceptions/team_notexist
+$execute unless data storage lbmanager:main teams."$(team)" run function lbmanager:commands/exceptions/team_notexist
 
 $scoreboard players set validation lbmanager.main $(x)
 $scoreboard players set validation lbmanager.main $(y)
@@ -11,3 +11,5 @@ execute if score validation lbmanager.main matches ..-1 run function lbmanager:c
 execute if score success lbmanager.main matches 0 run return 0
 
 $data modify storage lbmanager:main teams.$(team).spawn set value {x:$(x),y:$(y),z:$(z),spread:$(spread)}
+
+$function #lbmanager:team/spawn_changed {team:$(team)}

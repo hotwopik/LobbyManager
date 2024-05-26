@@ -12,3 +12,4 @@ function lbmanager:commands/add_player_data with storage lbmanager:temp data
 data remove storage lbmanager:temp data
 
 tag @s add lbmanager.in_team
+function #lbmanager:player/join_team
