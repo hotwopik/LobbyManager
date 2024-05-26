@@ -7,3 +7,5 @@ data remove storage lbmanager:temp team_search
 execute if data storage lbmanager:main watching_point run function lbmanager:game/start/watching_point with storage lbmanager:main watching_point
 
 function #lbmanager:game/started
+execute as @a[tag=lbmanager.in_team] run function #lbmanager:player/start_playing
+execute as @a[tag=!lbmanager.in_team] run function #lbmanager:player/start_watching
