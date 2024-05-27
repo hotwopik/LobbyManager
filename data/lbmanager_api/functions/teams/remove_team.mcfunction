@@ -12,4 +12,4 @@ $data remove storage lbmanager:main team_ids[{id:"$(team)"}]
 $scoreboard players reset $(team) lbmanager.teams.player_count
 $scoreboard players reset $(team) lbmanager.teams.max_count
 
-$function #lbmanager:team/removed {team:$(team)}
+$function #lbmanager:team/removed {team:"$(team)"}

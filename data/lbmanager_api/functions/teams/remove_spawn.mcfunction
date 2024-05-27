@@ -4,6 +4,6 @@ $execute unless data storage lbmanager:main teams."$(team)" run function lbmanag
 
 execute if score success lbmanager.main matches 0 run return 0
 
-$data remove storage lbmanager:main teams.$(team).spawn
+$data remove storage lbmanager:main teams."$(team)".spawn
 
-$function #lbmanager:team/spawn_removed {team:$(team)}
+$function #lbmanager:team/spawn_removed {team:"$(team)"}

@@ -4,4 +4,4 @@ $execute unless entity $(name) run function lbmanager:commands/exceptions/player
 
 execute if score success lbmanager.main matches 0 run return 0
 
-$execute as $(name) run function lbmanager_api:players/add_to_team {team:$(team)}
+$execute as $(name) run function lbmanager_api:players/add_to_team {team:"$(team)"}

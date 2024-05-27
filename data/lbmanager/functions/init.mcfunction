@@ -12,5 +12,6 @@ data merge storage lbmanager:main {team_ids:[],teams:{},players:{}}
 #Default values
 scoreboard players set joining lbmanager.main 0
 scoreboard players set auto_kicking lbmanager.main 1
+scoreboard players set returns_start lbmanager.main 1
 
 function #lbmanager:after_init
