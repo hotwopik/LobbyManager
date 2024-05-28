@@ -6,7 +6,7 @@ $scoreboard players set $(id) lbmanager.teams.max_count $(max_count)
 $execute if score $(id) lbmanager.teams.max_count matches ..-2 run scoreboard players set $(id) lbmanager.teams.max_count -1
 
 $data modify storage lbmanager:temp mc_team_check set value '$(mc_team)'
-$execute store success score "$(id)" lbmanager.teams.has_mc_team run data modify storage lbmanager:temp mc_team_check set value ""
+$execute store success score $(id) lbmanager.teams.has_mc_team run data modify storage lbmanager:temp mc_team_check set value ""
 data remove storage lbmanager:temp mc_team_check
 
 $execute if score team_creation lbmanager.main matches 0 run function #lbmanager:team/modified {team:"$(id)"}

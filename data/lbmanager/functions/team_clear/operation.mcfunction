@@ -1,0 +1,1 @@
+$data modify storage lbmanager:main teams.$(team).players set value []
