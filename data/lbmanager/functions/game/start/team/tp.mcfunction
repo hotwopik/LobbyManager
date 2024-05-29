@@ -1,1 +1,1 @@
-$tp @a[tag=lbmanager.spreaded] $(x) $(y) $(z)
+$tp @a[tag=lbmanager.spreaded] $(x) $(y) $(z) $(x_rotation) $(y_rotation)

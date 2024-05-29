@@ -5,6 +5,10 @@ $execute unless data storage lbmanager:main teams."$(team)" run function lbmanag
 $scoreboard players set validation lbmanager.main $(x)
 $scoreboard players set validation lbmanager.main $(y)
 $scoreboard players set validation lbmanager.main $(z)
+
+$scoreboard players set validation lbmanager.main $(y_rotation)
+$scoreboard players set validation lbmanager.main $(x_rotation)
+
 $scoreboard players set validation lbmanager.main $(spread)
 
 $execute if score validation lbmanager.main matches 0 run scoreboard players set $(team) lbmanager.teams.spread 0
@@ -15,6 +19,6 @@ scoreboard players reset validation lbmanager.main
 
 execute if score success lbmanager.main matches 0 run return 0
 
-$data modify storage lbmanager:main teams."$(team)".spawn set value {x:$(x),y:$(y),z:$(z),spread:$(spread)}
+$data modify storage lbmanager:main teams."$(team)".spawn set value {x:$(x),y:$(y),z:$(z),spread:$(spread),x_rotation:$(x_rotation),y_rotation:$(y_rotation)}
 
 $function #lbmanager:team/spawn_changed {team:"$(team)"}

@@ -1,1 +1,1 @@
-$tp @s $(x) $(y) $(z)
+$tp @s $(x) $(y) $(z) $(x_rotation) $(y_rotation)

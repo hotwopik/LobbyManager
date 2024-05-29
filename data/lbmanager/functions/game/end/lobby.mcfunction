@@ -1,2 +1,2 @@
-$execute if score lobby_spread lbmanager.main matches 0 run function lbmanager:game/end/tp {x:$(x),y:$(y),z:$(z)}
-$execute if score lobby_spread lbmanager.main matches 1 run function lbmanager:game/end/spread {x:$(x),y:$(y),z:$(z),spread:$(spread)}
+execute if score lobby_spread lbmanager.main matches 0 run function lbmanager:game/end/tp with storage lbmanager:main lobby
+execute if score lobby_spread lbmanager.main matches 1 run function lbmanager:game/end/spread with storage lbmanager:main lobby

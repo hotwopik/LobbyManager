@@ -1,1 +1,1 @@
-$tp @a[tag=!lbmanager.in_team] $(x) $(y) $(z)
+$tp @a[tag=!lbmanager.in_team] $(x) $(y) $(z) $(x_rotation) $(y_rotation)

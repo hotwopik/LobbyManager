@@ -1,1 +1,1 @@
-$spreadplayers $(x) $(z) 0 $(spread) under $(y) false @a
+$tp @a $(x) $(y) $(z) $(x_rotation) $(y_rotation)
