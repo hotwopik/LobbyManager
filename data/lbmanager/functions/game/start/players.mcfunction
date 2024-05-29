@@ -1,4 +1,4 @@
-data modify storage lbmanager:temp team_search.target_player set from storage lbmanager:temp team_search.players[0].uuid
+data modify entity @s Owner set from storage lbmanager:temp team_search.players[0].uuid
 
 execute on origin run tag @s add lbmanager.spreaded
 

@@ -1,1 +1,2 @@
-$spreadplayers $(x) $(z) 0 $(spread) under $(y) false @a
+$execute if score lobby_spread lbmanager.main matches 0 run function lbmanager:game/end/tp {x:$(x),y:$(y),z:$(z)}
+$execute if score lobby_spread lbmanager.main matches 1 run function lbmanager:game/end/spread {x:$(x),y:$(y),z:$(z),spread:$(spread)}

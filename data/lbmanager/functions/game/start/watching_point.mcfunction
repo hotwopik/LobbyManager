@@ -1,1 +1,2 @@
-$spreadplayers $(x) $(z) 0 $(spread) under $(y) false @a[tag=!lbmanager.in_team]
+$execute if score watching_point_spread lbmanager.main matches 0 run function lbmanager:game/start/watching_point/tp {x:$(x),y:$(y),z:$(z)}
+$execute if score watching_point_spread lbmanager.main matches 1 run function lbmanager:game/start/watching_point/spread {x:$(x),y:$(y),z:$(z),spread:$(spread)}

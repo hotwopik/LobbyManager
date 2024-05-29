@@ -1,0 +1,1 @@
+$tp @a[tag=lbmanager.spreaded] $(x) $(y) $(z)

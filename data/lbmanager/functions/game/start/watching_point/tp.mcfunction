@@ -1,0 +1,1 @@
+$tp @a[tag=!lbmanager.in_team] $(x) $(y) $(z)
