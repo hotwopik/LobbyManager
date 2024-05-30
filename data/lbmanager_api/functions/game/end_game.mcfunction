@@ -10,8 +10,9 @@ scoreboard players reset @a lbmanager.player.game
 
 execute if data storage lbmanager:main lobby run function lbmanager:game/end/lobby
 
-execute if score joining lbmanager.main matches 1 as @a[tag=!lbmanager.in_team] run function lbmanager:player/auto_joining
-
 function #lbmanager:game/ended
 execute as @a[tag=lbmanager.in_team] run function #lbmanager:player/game/end_playing
 execute as @a[tag=!lbmanager.in_team] run function #lbmanager:player/game/end_watching
+
+execute if score kick_end lbmanager.main matches 1 run function lbmanager:game/end/kick_end
+execute if score kick_end lbmanager.main matches 0 if score joining lbmanager.main matches 1 as @a[tag=!lbmanager.in_team] run function lbmanager:player/auto_joining
