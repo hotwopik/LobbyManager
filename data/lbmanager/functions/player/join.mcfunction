@@ -1,3 +1,6 @@
+#Config status
+tag @s add lbmanager.config_status
+scoreboard players set @s lbmanager.player.config_status 5
 #First join
 execute unless score @s lbmanager.player.leave matches 1 run function lbmanager:player/first_join
 
