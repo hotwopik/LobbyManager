@@ -2,6 +2,7 @@ scoreboard players set init lbmanager.main 1
 
 #Player
 scoreboard objectives add lbmanager.player.leave custom:leave_game
+scoreboard objectives add lbmanager.player.respawned custom:time_since_rest
 scoreboard objectives add lbmanager.player.game dummy
 scoreboard objectives add lbmanager.player.config_status dummy
 #Teams
