@@ -7,11 +7,11 @@ execute unless score @s lbmanager.player.leave matches 1 run function lbmanager:
 #Join
 scoreboard players set @s lbmanager.player.leave 0
 
-execute if score auto_kicking lbmanager.main matches 1 run function lbmanager:player/kick
+execute if entity @s[tag=lbmanager.in_team] run function lbmanager:player/check_team
 execute if score @s lbmanager.player.game matches 1.. run function lbmanager:player/return
 
 scoreboard players add players_reged lbmanager.main 1
 
-execute if score joining lbmanager.main matches 1..2 run function lbmanager:player/auto_joining
+execute if score joining lbmanager.main matches 1..2 unless entity @s[tag=lbmanager.in_team] run function lbmanager:player/auto_joining
 
 function #lbmanager:player/join
