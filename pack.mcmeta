@@ -2,6 +2,6 @@
     "pack":{
         "pack_format":18,
         "description":"Player managment lib",
-        "supported_formats":[18,41]
+        "supported_formats":[18,61]
     }
 }
