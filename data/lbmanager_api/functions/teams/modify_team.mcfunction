@@ -9,6 +9,6 @@ $data modify storage lbmanager:temp mc_team_check set value '$(mc_team)'
 $execute store success score $(team) lbmanager.teams.has_mc_team run data modify storage lbmanager:temp mc_team_check set value ""
 data remove storage lbmanager:temp mc_team_check
 
-$execute if score team_creation lbmanager.main matches 0 run function #lbmanager:team/modified {team:"$(team)"}
-$execute if score team_creation lbmanager.main matches 1 run function #lbmanager:team/created {team:"$(team)"}
+$execute if score team_creation lbmanager.main matches 0 run function #lbmanager:team/modified {team:"$(team)",name:'$(name)',mc_team:$(mc_team),max_count:$(max_count)}
+$execute if score team_creation lbmanager.main matches 1 run function #lbmanager:team/created {team:"$(team)",name:'$(name)',mc_team:$(mc_team),max_count:$(max_count)}
 scoreboard players reset team_creation lbmanager.main
