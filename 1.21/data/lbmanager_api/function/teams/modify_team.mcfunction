@@ -1,6 +1,8 @@
 scoreboard players set team_creation lbmanager.main 0
 $execute unless data storage lbmanager:main teams."$(team)" run function lbmanager:commands/create_team {id:$(team)}
-$data modify storage lbmanager:main teams."$(team)" set value {name:'$(name)',mc_team:''}
+
+$data modify storage lbmanager:main teams."$(team)".name set value '$(name)'
+$execute unless score $(team) lbmanager.teams.has_mc_team matches 1 run data modify storage lbmanager:main teams."$(team)".mc_team set value ''
 
 $scoreboard players set $(team) lbmanager.teams.max_count $(max_count)
 $execute if score $(team) lbmanager.teams.max_count matches ..-2 run scoreboard players set $(team) lbmanager.teams.max_count -1
