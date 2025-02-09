@@ -1,0 +1,2 @@
+execute if score @s lbmanager.player.game = game_id lbmanager.main run function lbmanager:player/return/in_own_game
+execute unless score @s lbmanager.player.game = game_id lbmanager.main run function lbmanager:player/return/not_own_game

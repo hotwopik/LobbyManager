@@ -1,0 +1,3 @@
+$execute if score $(target) lbmanager.teams.max_count matches -1 run scoreboard players operation team_player_count lbmanager.main < $(target) lbmanager.teams.player_count
+$execute unless score $(target) lbmanager.teams.max_count matches -1 unless score $(target) lbmanager.teams.max_count = $(target) lbmanager.teams.player_count run scoreboard players operation team_player_count lbmanager.main < $(target) lbmanager.teams.player_count
+$execute if score team_player_count lbmanager.main matches -1 run scoreboard players operation team_player_count lbmanager.main = $(target) lbmanager.teams.player_count

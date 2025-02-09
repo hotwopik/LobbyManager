@@ -1,0 +1,1 @@
+$function lbmanager:commands/transfer/$(type) $(transfer)

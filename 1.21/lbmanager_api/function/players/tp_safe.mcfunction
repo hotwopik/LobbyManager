@@ -1,0 +1,2 @@
+$execute if entity @s[type=player] run return run function lbmanager:commands/transfer/tp {x:$(x),y:$(y),z:$(z),x_rotation:$(x_rotation),y_rotation:$(y_rotation),dimension:$(dimension)}
+$execute in $(dimension) run tp @s $(x) $(y) $(z) $(x_rotation) $(y_rotation)

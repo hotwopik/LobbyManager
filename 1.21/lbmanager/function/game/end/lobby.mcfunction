@@ -1,0 +1,2 @@
+execute if score lobby_spread lbmanager.main matches 0 run function lbmanager:game/end/transfer/tp with storage lbmanager:main lobby
+execute if score lobby_spread lbmanager.main matches 1 run function lbmanager:game/end/transfer/spread with storage lbmanager:main lobby

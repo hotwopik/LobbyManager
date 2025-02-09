@@ -1,0 +1,2 @@
+execute if score joining lbmanager.main matches 1 if score in_game lbmanager.main matches 1 run return 0
+$execute as @r[tag=!lbmanager.in_team] run function lbmanager_api:players/add_to_team {team:"$(team)"}

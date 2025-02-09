@@ -1,0 +1,2 @@
+execute if score auto_kicking lbmanager.main matches 1 run function lbmanager:player/team/kick with storage lbmanager:temp data
+$execute if score auto_kicking lbmanager.main matches 0 unless data storage lbmanager:main teams."$(team)" run function lbmanager:player/team/kick with storage lbmanager:temp data
