@@ -4,5 +4,3 @@ execute unless score players_reged lbmanager.main = players_now lbmanager.main r
 
 execute if score in_game lbmanager.main matches 1 run function #lbmanager:game/game_tick
 execute if score in_game lbmanager.main matches 0 run function #lbmanager:game/lobby_tick
-
-execute as @e[tag=lbmanager.display.spawn] at @s run function lbmanager:display/spawn
