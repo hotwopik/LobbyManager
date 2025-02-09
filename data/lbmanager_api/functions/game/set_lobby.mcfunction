@@ -18,4 +18,4 @@ scoreboard players reset validation lbmanager.main
 execute if score success lbmanager.main matches 0 run return 0
 
 $data modify storage lbmanager:main lobby set value {x:$(x),y:$(y),z:$(z),spread:$(spread),x_rotation:$(x_rotation),y_rotation:$(y_rotation),dimension:$(dimension)}
-function #lbmanager:game/lobby_changed
+function #lbmanager:game/lobby_changed with storage lbmanager:main lobby
