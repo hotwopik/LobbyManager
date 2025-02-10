@@ -161,17 +161,115 @@ Arguments:
 - team - team id
 
 ## Player tags
+*Changing tags may cause unexpected errors*
 
 `lbmanager.in_team` - player has team<br>
 `lbmanager.team.<team id>` - player is in team with team id<br>
 `lbmanager.config_status` - most likely player hasn't entity
 
-## Function tags(Events)
+## Scores
+*Changing scores may cause unexpected errors*
+### Global
+`ingame lbmanager.main` - `0` if game isn't runing, `1` else<br>
+`game_id lbmanager.main` - game session id<br>
+### Teams
+`<team id> lbmanager.teams.has_mc_team` - `1` if some Minecraft team bounded to datapack team, `0` else<br>
+`<team id> lbmanager.teams.player_count` - current team player count<br>
+`<team id> lbmanager.teams.max_count` - team player count maximum
+
+## Function tags (Events)
 ### Global
 `#lbmanager:after_init`<br>
-Runs after datapack first load, before `#lbmanager:after_load`
+Runs after datapack first load, before `#lbmanager:after_load`.
 
 `#lbmanager:after_load`<br>
-Runs after datapack load
+Runs after datapack load.
 
 ### Game
+`#lbmanager:game/started`<br>
+Runs after game session start.
+
+`#lbmanager:game/ended`<br>
+Runs after game session end.
+
+`#lbmanager:game/lobby_changed`<br>
+Runs after lobby position change.
+
+`#lbmanager:game/lobby_removed`<br>
+Runs after lobby remove.
+
+`#lbmanager:game/watching_point_changed`<br>
+Runs after watching point change.
+
+`#lbmanager:game/watching_point_removed`<br>
+Runs after watching point remove.
+
+`#lbmanager:game/game_tick`<br>
+Runs every tick if game is runing.
+
+`#lbmanager:game/lobby_tick`<br>
+Runs every tick if game isn't runing.
+
+### Players
+`#lbmanager:player/first_join`<br>
+Runs as player that join first time.
+
+`#lbmanager:player/join`<br>
+Runs as joining player.
+
+`#lbmanager:player/respawn`<br>
+Runs as player that was respawned by the game or using some of respawn function.
+
+`#lbmanager:player/game/start_playing`<br>
+Runs as player in teams when game start.
+
+`#lbmanager:player/game/start_watching`<br>
+Runs as player not in team when game start.
+
+`#lbmanager:player/game/end_playing`<br>
+Runs as player in teams when game ends.
+
+`#lbmanager:player/game/end_watching`<br>
+Runs as player not in team when game ends.
+
+`#lbmanager:player/return/player_returned`<br>
+Runs as player in team that returns in own game.
+
+`#lbmanager:player/return/return_after_game`<br>
+Runs as player that returns after own game.
+
+`#lbmanager:player/return/watcher_returned`<br>
+Runs as player not in team that returns in own game.
+
+`#lbmanager:player/team/join_team`<br>
+Runs as player that join team.<br>
+Context:
+- team - team id that was joined
+
+`#lbmanager:player/team/leave_team`<br>
+Runs as player that leave team.<br>
+Context:
+- team - team id that was leaved
+
+`#lbmanager:player/team/leave_game_in_team`<br>
+Runs when player in team leaves the game.<br>
+Context:
+- team - team id
+- uuid - uuid of player is array format
+
+### Settings
+`#lbmanager:settings/kick_after_end_changed`<br>
+Runs when kick after end changed.
+
+`#lbmanager:settings/kick_on_leave_changed`<br>
+Runs when kick on leave changed.
+
+`#lbmanager:settings/returns_to_start_changed`<br>
+Runs when returns to start changed.
+
+`#lbmanager:settings/team_join_mode_changed`<br>
+Runs when team join mode changed.
+
+### Teams
+`#lbmanager:team/craeted`<br>
+Runs when team created.<br>
