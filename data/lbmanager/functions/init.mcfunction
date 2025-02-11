@@ -44,6 +44,14 @@ data merge storage lbmanager:translation {\
         player_not_founded:"Player not founded",\
         player_not_in_team:"Player not in team",\
         player_allready_in_team:"Player allready in team",\
+    },\
+    list:{\
+        no_teams:"There is no teams",\
+        teams:"Teams:",\
+        display_name:"Display name: ",\
+        minecraft_team:"Minecraft team: ",\
+        max_count:"Max count: ",\
+        player_count:"Player count: "\
     }\
 }
 
