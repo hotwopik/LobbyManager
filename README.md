@@ -273,3 +273,36 @@ Runs when team join mode changed.
 ### Teams
 `#lbmanager:team/craeted`<br>
 Runs when team created.<br>
+Context:
+- team - team id
+- name - team display name
+- max_count - max team size
+
+`#lbmanager:team/modified`<br>
+Runs when team modified.<br>
+Context:
+- team - team id
+- name - team display name
+- max_count - max team size
+
+`#lbmanager:team/removed`<br>
+Runs when team remove.<br>
+Context:
+- team - team id
+
+`#lbmanager:team/spawn_changed`<br>
+Runs when team spawn changed.<br>
+Context:
+- team - team id
+- x - x position
+- y - y position
+- z - z position
+- spread - spreading radius. Disabled if set to `0`
+- x_rotation - player rotation on x axys
+- y_rotation - player rotation on y axys
+- dimension - dimension
+
+`#lbmanager:team/spawn_removed`<br>
+Runs when team spawn resets.<br>
+Context:
+- team - team id
