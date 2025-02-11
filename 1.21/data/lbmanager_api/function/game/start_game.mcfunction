@@ -1,4 +1,4 @@
-execute if score in_game lbmanager.main matches 1 run return run function lbmanager:commands/exceptions/game_allready_started
+execute if score in_game lbmanager.main matches 1 run return run function lbmanager:commands/exceptions/runtime {level:"error",log:"game_allready_started"}
 
 scoreboard players set in_game lbmanager.main 1
 scoreboard players add game_id lbmanager.main 1

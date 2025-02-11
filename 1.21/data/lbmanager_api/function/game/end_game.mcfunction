@@ -1,4 +1,4 @@
-execute if score in_game lbmanager.main matches 0 run return run function lbmanager:commands/exceptions/not_in_game
+execute if score in_game lbmanager.main matches 0 run return run function lbmanager:commands/exceptions/runtime {level:"error",log:"game_isnt_started"}
 
 scoreboard players set in_game lbmanager.main 0
 scoreboard players reset @a lbmanager.player.game

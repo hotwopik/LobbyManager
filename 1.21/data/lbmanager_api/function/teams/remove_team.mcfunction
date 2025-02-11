@@ -1,4 +1,4 @@
-$execute unless data storage lbmanager:main teams."$(team)" run return run function lbmanager:commands/exceptions/team_notexist
+$execute unless data storage lbmanager:main teams."$(team)" run return run function lbmanager:commands/exceptions/exception {level:"error",log:"team_not_exist"}
 
 $data modify storage lbmanager:temp players_to_remove set from storage lbmanager:main teams."$(team)".players
 execute if data storage lbmanager:temp players_to_remove[0] summon snowball run function lbmanager:commands/remove_players_from_team

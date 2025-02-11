@@ -1,2 +1,2 @@
-tellraw @s {"text":"[WARN] Mode must be none, inlobby or allways. Changed to none","color":"yellow"}
+tellraw @s [{"storage":"lbmanager:translation","nbt":"warn","interpret":true},{"storage":"lbmanager:translation","nbt":"exception.incorrect_joining","interpret":true}]
 scoreboard players set joining lbmanager.main 0

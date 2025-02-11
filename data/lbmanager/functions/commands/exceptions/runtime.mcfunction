@@ -1,0 +1,2 @@
+scoreboard players set success lbmanager.main 0
+$tellraw @s [{"storage":"lbmanager:translation","nbt":"$(level)","interpret":true},{"storage":"lbmanager:translation","nbt":"runtime.$(log)","interpret":true}]

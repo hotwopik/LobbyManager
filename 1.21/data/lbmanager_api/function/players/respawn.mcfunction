@@ -1,4 +1,4 @@
-execute unless entity @s[type=player] run return run function lbmanager:commands/exceptions/is_not_player
+execute unless entity @s[type=player] run return run function lbmanager:commands/exceptions/exception {level:"error",log:"is_not_player"}
 
 execute if score in_game lbmanager.main matches 0 if data storage lbmanager:main lobby run function lbmanager:commands/lobby
 execute if score in_game lbmanager.main matches 0 run return 1

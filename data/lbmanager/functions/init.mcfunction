@@ -24,4 +24,27 @@ scoreboard players set join_mode.none lbmanager.main 0
 scoreboard players set join_mode.allways lbmanager.main 1
 scoreboard players set join_mode.inlobby lbmanager.main 2
 
+#Translations
+data merge storage lbmanager:translation {\
+    error:'{"text":"[ERROR] ",color:red}',\
+    warn:'{"text":"[WARN] ",color:yellow}',\
+    exception:{\
+        incorrect_boolean:"Field mode must be 0 or 1. Changed to 0",\
+        incorrect_join_mode:"Field mode must be none, inlobby or allways. Changed to none",\
+        incorrect_spread:"Spread must be a positive",\
+        is_not_player:"Entity isn't player",\
+        minecraft_team_not_exist:"Given Minecraft team is not exist",\
+        team_not_exist:"Given team not exist",\
+        lobby_not_exist:"Lobby does not exist",\
+        watching_point_not_exist:"Watching point does not exist",\
+    },\
+    runtime:{\
+        game_allready_started:"Game allready started",\
+        game_isnt_started:"Game isn't started",\
+        player_not_founded:"Player not founded",\
+        player_not_in_team:"Player not in team",\
+        player_allready_in_team:"Player allready in team",\
+    }\
+}
+
 function #lbmanager:after_init

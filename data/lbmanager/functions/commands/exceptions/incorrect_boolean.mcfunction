@@ -1,2 +1,2 @@
-$tellraw @s {"text":"[WARN] Field $(field) must be 0 or 1. Changed to 0","color":"yellow"}
+tellraw @s [{"storage":"lbmanager:translation","nbt":"warn","interpret":true},{"storage":"lbmanager:translation","nbt":"exception.incorrect_boolean","interpret":true}]
 $scoreboard players set $(value) lbmanager.main 0

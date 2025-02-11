@@ -1,6 +1,6 @@
-execute unless entity @s[type=player] run return run function lbmanager:commands/exceptions/is_not_player
-$execute unless data storage lbmanager:main teams."$(team)" run return run function lbmanager:commands/exceptions/team_notexist
-execute if entity @s[tag=lbmanager.in_team] run return run function lbmanager:commands/exceptions/allready_inteam
+execute unless entity @s[type=player] run return run function lbmanager:commands/exceptions/exception {level:"error",log:"is_not_player"}
+$execute unless data storage lbmanager:main teams."$(team)" run return run function lbmanager:commands/exceptions/exception {level:"error",log:"team_not_exist"}
+execute if entity @s[tag=lbmanager.in_team] run return run function lbmanager:commands/exceptions/runtime {level:"error",log:"player_allready_in_team"}
 
 data modify storage lbmanager:temp data.UUID set from entity @s UUID
 $data modify storage lbmanager:temp data.team set value "$(team)"
