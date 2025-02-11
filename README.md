@@ -1,5 +1,6 @@
 Minecraft library datapack for maps.</br>
-Contains various tools for player and game sessions management.
+Contains various tools for player and game sessions management.<br>
+Supported minecraft versions: **1.20.2-1.21.4**
 
 # API
 ## Functions
