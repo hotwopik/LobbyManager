@@ -1,2 +1,2 @@
-$data modify storage lbmanager:temp team_search.players set from storage lbmanager:main teams.$(target_team).players
+$data modify storage lbmanager:temp team_search.players set from storage lbmanager:main teams."$(target_team)".players
 execute if data storage lbmanager:temp team_search.players[0] summon snowball run function lbmanager:player/leave/players

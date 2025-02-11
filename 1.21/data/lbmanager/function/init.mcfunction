@@ -17,6 +17,7 @@ scoreboard players set joining lbmanager.main 0
 scoreboard players set auto_kicking lbmanager.main 1
 scoreboard players set returns_start lbmanager.main 1
 scoreboard players set kick_end lbmanager.main 0
+scoreboard players set work_as_spawn lbmanager.main 1
 scoreboard players set in_game lbmanager.main 0
 scoreboard players set game_id lbmanager.main 0
 

@@ -1,0 +1,1 @@
+$data modify storage lbmanager:out team set from storage lbmanager:main teams."$(team)"

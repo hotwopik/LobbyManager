@@ -30,7 +30,7 @@ Arguments:
 Reset lobby.
 
 `lbmanager_api:game/set_watching_point`</br>
-Sets watching point.</br>
+Sets watching point. Watching point will work as player spawn point while game is runing.</br>
 Arguments:
 - x - x position
 - y - y position
@@ -92,7 +92,7 @@ Arguments:
 
 ### Setting
 `lbmanager_api:settings/kick_after_end`</br>
-Should datapack kick players from teams when game ends. Default to true.</br>
+Should datapack kick players from teams when game ends. Default to false.</br>
 Arguments:
 - mode - `0` if shouldn't, `1` if should.
 
@@ -102,7 +102,7 @@ Arguments:
 - mode - `0` if shouldn't, `1` if should.
 
 `lbmanager_api:settings/returns_to_start`</br>
-If game is runing and player returns in own game after leave, should datapack teleport it to team spawn or watching point. Player will be teleported to watching point anyway if kick on leave is enabled. Default to false.</br>
+If game is runing and player returns in own game after leave, should datapack teleport it to team spawn or watching point. Player will be teleported to watching point anyway if kick on leave is enabled. Default to true.</br>
 Arguments:
 - mode - `0` if shouldn't, `1` if should.
 
@@ -139,7 +139,7 @@ Arguments:
 - team - datapack team id
 
 `lbmanager_api:teams/set_spawn`</br>
-Set team spawn. Team spawn will not work as player spawn point.<br>
+Set team spawn. Team spawn will work as player spawn point while game is runing.<br>
 Arguments:
 - team - team id
 - x - x position
@@ -157,6 +157,11 @@ Arguments:
 
 `lbmanager_api:teams/respawn`</br>
 If game is runing, teleport players in team to team spawn, else teleport players in team to lobby.<br>
+Arguments:
+- team - team id
+
+`lbmanager_api:teams/get_team`</br>
+Put team data to storage `lbmanager:out team`<br>
 Arguments:
 - team - team id
 
