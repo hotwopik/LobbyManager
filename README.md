@@ -119,7 +119,6 @@ Display current team list.
 Change team settings. If team isn't exist, create it.</br>
 Arguments:
 - team - team id
-- name - team display name(actualy is never used), text component
 - max_count - max size of team. If `-1`, will not has max size.
 
 `lbmanager_api:teams/remove_team`</br>
@@ -280,14 +279,12 @@ Runs when team join mode changed.
 Runs when team created.<br>
 Context:
 - team - team id
-- name - team display name
 - max_count - max team size
 
 `#lbmanager:team/modified`<br>
 Runs when team modified.<br>
 Context:
 - team - team id
-- name - team display name
 - max_count - max team size
 
 `#lbmanager:team/removed`<br>
@@ -311,3 +308,37 @@ Context:
 Runs when team spawn resets.<br>
 Context:
 - team - team id
+
+## Translations
+Datapack support message changing using `lbmanager:translation` storage.<br>
+Translation command example:
+```mcfunction
+data merge storage lbmanager:translation {\
+    error:'{"text":"[ERROR] ",color:red}',\
+    warn:'{"text":"[WARN] ",color:yellow}',\
+    exception:{\
+        incorrect_boolean:'{"text":"Field mode must be 0 or 1. Changed to 0}',\
+        incorrect_join_mode:'{"text":"Field mode must be none, inlobby or allways. Changed to none"}',\
+        incorrect_spread:'{"text":"Spread must be a positive"}',\
+        is_not_player:'{"text":"Entity isn\'t player"}',\
+        minecraft_team_not_exist:'{"text":"Given Minecraft team is not exist"}',\
+        team_not_exist:'{"text":"Given team not exist"}',\
+        lobby_not_exist:'{"text":"Lobby does not exist"}',\
+        watching_point_not_exist:'{"text":"Watching point does not exist"}',\
+    },\
+    runtime:{\
+        game_allready_started:'{"text":"Game allready started"}',\
+        game_isnt_started:'{"text":"Game isn\'t started"}',\
+        player_not_founded:'{"text":"Player not founded"}',\
+        player_not_in_team:'{"text":"Player not in team"}',\
+        player_allready_in_team:'{"text":"Player allready in team"}',\
+    },\
+    list:{\
+        no_teams:'{"text":"There is no teams"}',\
+        teams:'{"text":"Teams:"}',\
+        minecraft_team:'{"text":"Minecraft team: "}',\
+        max_count:'{"text":"Max count: "}',\
+        player_count:'{"text":"Player count: "}'\
+    }\
+}
+```
