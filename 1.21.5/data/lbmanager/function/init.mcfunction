@@ -11,8 +11,10 @@ scoreboard objectives add lbmanager.teams.spread dummy
 scoreboard objectives add lbmanager.teams.player_count dummy
 scoreboard objectives add lbmanager.teams.max_count dummy
 #Data
-data merge storage lbmanager:main {team_ids:[],teams:{},players:{},transfers:{}}
+data modify storage lbmanager:main {} set value {team_ids:[],teams:{},players:{},transfers:{},own_spawn:{}}
 #Default values
+scoreboard players set respawn_override lbmanager.main 0
+scoreboard players set reset_own_on_end lbmanager.main 1
 scoreboard players set joining lbmanager.main 0
 scoreboard players set auto_kicking lbmanager.main 1
 scoreboard players set returns_start lbmanager.main 1
