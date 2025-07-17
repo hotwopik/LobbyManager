@@ -175,7 +175,7 @@ Arguments:
 ## Scores
 *Changing scores may cause unexpected errors*
 ### Global
-`ingame lbmanager.main` - `0` if game isn't runing, `1` else<br>
+`in_game lbmanager.main` - `0` if game isn't runing, `1` else<br>
 `game_id lbmanager.main` - game session id<br>
 ### Teams
 `<team id> lbmanager.teams.has_mc_team` - `1` if some Minecraft team bounded to datapack team, `0` else<br>

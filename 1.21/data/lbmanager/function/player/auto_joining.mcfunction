@@ -1,4 +1,4 @@
-execute if score joining lbmanager.main matches 1 if score in_game lbmanager.main matches 1 run return 0
+execute if score joining lbmanager.main matches 2 if score in_game lbmanager.main matches 1 run return 0
 
 scoreboard players set team_player_count lbmanager.main -1
 data modify storage lbmanager:temp team_search.list set from storage lbmanager:main team_ids
