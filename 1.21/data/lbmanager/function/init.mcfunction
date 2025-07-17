@@ -11,11 +11,13 @@ scoreboard objectives add lbmanager.teams.spread dummy
 scoreboard objectives add lbmanager.teams.player_count dummy
 scoreboard objectives add lbmanager.teams.max_count dummy
 #Data
-data merge storage lbmanager:main {team_ids:[],teams:{},players:{},transfers:{}}
+data modify storage lbmanager:main {} set value {team_ids:[],teams:{},players:{},transfers:{},own_spawn:{}}
 #Default values
+scoreboard players set respawn_override lbmanager.main 0
 scoreboard players set joining lbmanager.main 0
 scoreboard players set auto_kicking lbmanager.main 1
 scoreboard players set returns_start lbmanager.main 1
+scoreboard players set reset_own_on_end lbmanager.main 1
 scoreboard players set kick_end lbmanager.main 0
 scoreboard players set in_game lbmanager.main 0
 scoreboard players set game_id lbmanager.main 0
@@ -37,6 +39,7 @@ data merge storage lbmanager:translation {\
         team_not_exist:'{"text":"Given team not exist"}',\
         lobby_not_exist:'{"text":"Lobby does not exist"}',\
         watching_point_not_exist:'{"text":"Watching point does not exist"}',\
+        safe_pos_is_invalid:'{"text":"Passed position is invalid"}',\
     },\
     runtime:{\
         game_allready_started:'{"text":"Game allready started"}',\

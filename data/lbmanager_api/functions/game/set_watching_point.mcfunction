@@ -11,7 +11,7 @@ scoreboard players reset validation lbmanager.main
 
 execute if score success lbmanager.main matches 0 run return 0
 
-$data modify storage lbmanager:main watching_point set value {x:$(x),y:$(y),z:$(z),spread:$(spread),x_rotation:$(x_rotation),y_rotation:$(y_rotation),dimension:$(dimension)}
+$data modify storage lbmanager:main watching_point set value {x:$(x),y:$(y),z:$(z),spread:$(spread),yaw:$(yaw),pitch:$(pitch),dimension:$(dimension),after_task:""}
 function #lbmanager:game/watching_point_changed with storage lbmanager:main watching_point
 
 return 1
@@ -20,6 +20,6 @@ $data get storage lbmanager:temp validation $(spread)
 $data get storage lbmanager:temp validation $(x)
 $data get storage lbmanager:temp validation $(y)
 $data get storage lbmanager:temp validation $(z)
-$data get storage lbmanager:temp validation $(x_rotation)
-$data get storage lbmanager:temp validation $(y_rotation)
+$data get storage lbmanager:temp validation $(yaw)
+$data get storage lbmanager:temp validation $(pitch)
 $execute in $(dimension) run say j

@@ -5,6 +5,8 @@ execute if score success lbmanager.main matches 0 run return 0
 scoreboard players set in_game lbmanager.main 0
 scoreboard players reset @a lbmanager.player.game
 
+execute if score reset_own_on_end lbmanager.main matches 1 run data modify storage lbmanager:main own_spawn set value {}
+
 execute if data storage lbmanager:main lobby run function lbmanager:game/end/lobby
 
 function #lbmanager:game/ended

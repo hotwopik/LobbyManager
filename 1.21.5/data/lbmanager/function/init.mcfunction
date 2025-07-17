@@ -37,6 +37,7 @@ data merge storage lbmanager:translation {\
         team_not_exist:{text:"Given team not exist"},\
         lobby_not_exist:{text:"Lobby does not exist"},\
         watching_point_not_exist:{text:"Watching point does not exist"},\
+        safe_pos_is_invalid:'{"text":"Passed position is invalid"}',\
     },\
     runtime:{\
         game_allready_started:{text:"Game allready started"},\

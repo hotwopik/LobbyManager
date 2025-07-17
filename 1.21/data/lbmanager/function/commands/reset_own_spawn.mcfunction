@@ -1,0 +1,1 @@
+$data remove storage lbmanager:main own_spawn."$(UUID)"

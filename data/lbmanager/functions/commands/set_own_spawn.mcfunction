@@ -1,0 +1,1 @@
+$data modify storage lbmanager:main own_spawn."$(UUID)" set from storage lbmanager:temp data.spawn

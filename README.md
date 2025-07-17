@@ -23,8 +23,8 @@ Arguments:
 - y - y position
 - z - z position
 - spread - spreading radius. Disabled if set to `0`
-- x_rotation - player rotation on x axys
-- y_rotation - player rotation on y axys
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
 - dimension - dimension
 
 `lbmanager_api:game/remove_lobby`</br>
@@ -37,8 +37,8 @@ Arguments:
 - y - y position
 - z - z position
 - spread - spreading radius. Disabled if set to `0`
-- x_rotation - player rotation on x axys
-- y_rotation - player rotation on y axys
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
 - dimension - dimension
 
 `lbmanager_api:game/remove_watching_point`</br>
@@ -75,6 +75,37 @@ Do the same as function above but using player name.</br>
 Arguments:
 - name - player name
 
+`lbmanager_api:players/set_own_spawn`\
+Setup separated ingame spawn for player.\
+Arguments:
+- x - x position
+- y - y position
+- z - z position
+- spread - spreading radius. Disabled if set to `0`
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
+- dimension - dimension
+
+`lbmanager_api:players/set_own_spawn_name`\
+Do the same as function above but using player name.\
+Arguments:
+- name - player name
+- x - x position
+- y - y position
+- z - z position
+- spread - spreading radius. Disabled if set to `0`
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
+- dimension - dimension
+
+`lbmanager_api:players/reset_own_spawn`\
+Clear separated ingame spawn for player.\
+
+`lbmanager_api:players/reset_own_spawn_name`\
+Do the same as function above but using player name.\
+Arguments:
+- name - player name
+
 `lbmanager_api:players/tp_safe`</br>
 Teleport player safely:</br>
 If player entity exist, teleport it as default, else wait while player entity isn't created.</br>
@@ -82,8 +113,8 @@ Arguments:
 - x - x position
 - y - y position
 - z - z position
-- x_rotation - player rotation on x axys
-- y_rotation - player rotation on y axys
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
 - dimension - dimension
 
 `lbmanager_api:players/tp_safe_name`</br>
@@ -104,6 +135,16 @@ Arguments:
 
 `lbmanager_api:settings/returns_to_start`</br>
 If game is runing and player returns in own game after leave, should datapack teleport it to team spawn or watching point. Player will be teleported to watching point anyway if kick on leave is enabled. Default to true.</br>
+Arguments:
+- mode - `0` if shouldn't, `1` if should.
+
+`lbmanager_api:settings/override_respawn`</br>
+Should players be teleported on team spawn, own spawn or on watching point when they dies. Default to false.\
+Arguments:
+- mode - `0` if shouldn't, `1` if should.
+
+`lbmanager_api:settings/reset_own_spawn_on_end`</br>
+Should players own spawns be cleared on game end. Default to true.\
 Arguments:
 - mode - `0` if shouldn't, `1` if should.
 
@@ -146,8 +187,8 @@ Arguments:
 - y - y position
 - z - z position
 - spread - spreading radius. Disabled if set to `0`
-- x_rotation - player rotation on x axys
-- y_rotation - player rotation on y axys
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
 - dimension - dimension
 
 `lbmanager_api:teams/remove_spawn`</br>
@@ -225,6 +266,20 @@ Runs as joining player.
 `#lbmanager:player/respawn`<br>
 Runs as player that was respawned by the game or using some of respawn function.
 
+`#lbmanager:player/own_spawn_changed`<br>
+Runs as player when it own spawn changes.<br>
+Context:
+- x - x position
+- y - y position
+- z - z position
+- spread - spreading radius. Disabled if set to `0`
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
+- dimension - dimension
+
+`#lbmanager:player/own_spawn_reset`<br>
+Runs as player when it own spawn resets.<br>
+
 `#lbmanager:player/game/start_playing`<br>
 Runs as player in teams when game start.
 
@@ -275,6 +330,12 @@ Runs when returns to start changed.
 `#lbmanager:settings/team_join_mode_changed`<br>
 Runs when team join mode changed.
 
+`#lbmanager:settings/reset_own_spawn_on_end_changed`<br>
+Runs when reset own spawns on end changed.
+
+`#lbmanager:settings/respawn_override_changed`<br>
+Runs when team respawn override changed.
+
 ### Teams
 `#lbmanager:team/craeted`<br>
 Runs when team created.<br>
@@ -301,8 +362,8 @@ Context:
 - y - y position
 - z - z position
 - spread - spreading radius. Disabled if set to `0`
-- x_rotation - player rotation on x axys
-- y_rotation - player rotation on y axys
+- yaw - player rotation on x axys
+- pitch - player rotation on y axys
 - dimension - dimension
 
 `#lbmanager:team/spawn_removed`<br>

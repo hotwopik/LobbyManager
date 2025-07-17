@@ -9,9 +9,9 @@ $execute if score validation lbmanager.main matches 1.. run scoreboard players s
 execute if score validation lbmanager.main matches ..-1 run return run function lbmanager:commands/exceptions/exception {level:"error",log:"incorrect_spread"}
 scoreboard players reset validation lbmanager.main
 
-$data modify storage lbmanager:main teams."$(team)".spawn set value {x:$(x),y:$(y),z:$(z),spread:$(spread),x_rotation:$(x_rotation),y_rotation:$(y_rotation),dimension:$(dimension)}
+$data modify storage lbmanager:main teams."$(team)".spawn set value {x:$(x),y:$(y),z:$(z),spread:$(spread),yaw:$(yaw),pitch:$(pitch),dimension:$(dimension),after_task:""}
 
-$function #lbmanager:team/spawn_changed {team:"$(team)",x:$(x),y:$(y),z:$(z),spread:$(spread),x_rotation:$(x_rotation),y_rotation:$(y_rotation),dimension:$(dimension)}
+$function #lbmanager:team/spawn_changed {team:"$(team)",x:$(x),y:$(y),z:$(z),spread:$(spread),yaw:$(yaw),pitch:$(pitch),dimension:$(dimension)}
 return 1
 
 #Value validation
@@ -19,6 +19,6 @@ $data get storage lbmanager:temp validation $(spread)
 $data get storage lbmanager:temp validation $(x)
 $data get storage lbmanager:temp validation $(y)
 $data get storage lbmanager:temp validation $(z)
-$data get storage lbmanager:temp validation $(x_rotation)
-$data get storage lbmanager:temp validation $(y_rotation)
+$data get storage lbmanager:temp validation $(yaw)
+$data get storage lbmanager:temp validation $(pitch)
 $execute in $(dimension) run say j
